@@ -1,6 +1,6 @@
 region           = "eu-west-2"
-secretKey        = "bMLjePcC3ah0qH5QcQiOT/kooXRddmGlph5RIqAn"
-accessKey        = "AKIAVRUVVFKWVPNXHR76"
+secretKey        = XXXX
+accessKey        = XXXX
 bucketName       = "bunkleumilambdabucket"
 deployRoleName   = "aws_role"
 zipFile          = "zip"
