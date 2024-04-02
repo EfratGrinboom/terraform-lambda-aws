@@ -17,13 +17,13 @@ Writing Lambda Code
 Write code for a Lambda function , i did it in  Node.js.
 
 Writing Terraform Code
-    * **providers.tf:** define the provider configuration for Terraform.\
-    * **terraform.tfvars:** contains the variable definitions used by Terraform.
-    * **variable.tf:** defines the variables used in your Terraform configuration. 
-    * **main.tf:** Create an S3 storage bucket for uploading the ZIP file.
-    * **bucket.tf:** Upload the ZIP file to the bucket created in AWS.
-    * **api_gateway.tf:** Create a trigger for the API Gateway
-    * **output.tf:** defines the output configuration for Terraform.
+    **providers.tf:** define the provider configuration for Terraform.\
+    **terraform.tfvars:** contains the variable definitions used by Terraform.\
+    **variable.tf:** defines the variables used in your Terraform configuration. \
+    **main.tf:** Create an S3 storage bucket for uploading the ZIP file.\
+    **bucket.tf:** Upload the ZIP file to the bucket created in AWS.\
+    **api_gateway.tf:** Create a trigger for the API Gateway\
+    **output.tf:** defines the output configuration for Terraform.\
     
 # Creating a Jenkins Pipeline
 Set up a pipeline in Jenkins to automate the Terraform deployment process.
