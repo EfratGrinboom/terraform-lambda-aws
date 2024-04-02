@@ -16,7 +16,7 @@ resource "aws_iam_role" "app_deploy_role" {
 
 resource "aws_lambda_function" "app_lambda" {
   s3_key        = aws_s3_object.lambda_function.key
-  s3_bucket     = "test1lambdabucket"
+  s3_bucket     = aws_s3_bucket.lambda_bucket.id
   role          = aws_iam_role.app_deploy_role.arn
   handler       = "Lambda_Function.handler"
   runtime       = var.awsLambdaRuntime
