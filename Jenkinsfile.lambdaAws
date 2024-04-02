@@ -1,39 +1,37 @@
 pipeline {
     agent any
 
-    parameters {
-        string(name: 'github_repo', description: 'GitHub repository URL', defaultValue: 'https://github.com/EfratGrinboom/terraform-lambda-aws.git')
-        string(name: 'github_branch', description: 'GitHub branch to checkout', defaultValue: 'main')
-        string(name: 'terraform_version', description: 'Terraform version to use', defaultValue: '2.4.2')
-    }
-
     stages {
-        stage('Checkout GitHub') {
-            steps {
-                git credentialsId: 'github-credentials', url: "${params.github_repo}", branch: "${params.github_branch}"
-            }
-        }
         stage('Terraform Init') {
             steps {
-                sh "terraform init"
+                 dir('setup'){
+              echo 'Terraform init in progress'
+              sh '''
+                terraform init
+              '''
+            }
             }
         }
         stage('Terraform Plan') {
-            steps {
-                sh "terraform plan"
+           steps {
+            dir('setup'){
+              echo 'Terraform Plan in progress'
+              sh '''
+                terraform plan
+              '''
             }
+          }
         }
         stage('Terraform Apply (Confirmation Required)') {
             steps {
-                script {
-                    input 'Confirm Apply?'
-                    if (answer == 'yes') {
-                        sh 'terraform apply'
-                    }
-                }
+              dir('setup'){
+                echo 'Terraform Plan in progress'
+                sh '''
+                  terraform apply -auto-approve
+                '''
+              }
             }
         }
-
-        
+  
     }
 }
