@@ -1,0 +1,12 @@
+region           = "eu-west-2"
+secretKey        = "bMLjePcC3ah0qH5QcQiOT/kooXRddmGlph5RIqAn"
+accessKey        = "AKIAVRUVVFKWVPNXHR76"
+bucketName       = "test1lambdabucket"
+deployRoleName   = "aws_role"
+zipFile          = "zip"
+codeObjectKey    = "app.zip"
+sourceDir        = "../app"
+outputPath       = "../app/Lambda_Function.zip"
+lambdaName       = "Lambda_Function"
+awsLambdaRuntime = "nodejs18.x"
+
