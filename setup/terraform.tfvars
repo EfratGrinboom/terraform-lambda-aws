@@ -1,7 +1,7 @@
 region           = "eu-west-2"
 secretKey        = "bMLjePcC3ah0qH5QcQiOT/kooXRddmGlph5RIqAn"
 accessKey        = "AKIAVRUVVFKWVPNXHR76"
-bucketName       = "lambdabucket"
+bucketName       = "bunkleumilambdabucket"
 deployRoleName   = "aws_role"
 zipFile          = "zip"
 codeObjectKey    = "app.zip"
