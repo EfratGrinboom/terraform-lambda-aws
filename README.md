@@ -17,7 +17,7 @@ Writing Lambda Code
 Write code for a Lambda function , i did it in  Node.js.
 
 Writing Terraform Code
-    * **providers.tf:** define the provider configuration for Terraform.
+    * **providers.tf:** define the provider configuration for Terraform.\
     * **terraform.tfvars:** contains the variable definitions used by Terraform.
     * **variable.tf:** defines the variables used in your Terraform configuration. 
     * **main.tf:** Create an S3 storage bucket for uploading the ZIP file.
