@@ -19,7 +19,7 @@ resource "aws_apigatewayv2_stage" "lambda" {
 
 resource "aws_apigatewayv2_route" "get_route" {
   api_id    = aws_apigatewayv2_api.lambda.id
-  route_key = "$default"
+  route_key = "GET /"
 
   target = "integrations/${aws_apigatewayv2_integration.lambda_integration.id}"
 }
