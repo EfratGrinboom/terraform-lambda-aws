@@ -4,6 +4,16 @@ pipeline {
             terraform 'terraform'
         }
     stages {
+     stage('Terraform Destroy') {
+                steps {
+                     dir('setup'){
+                  echo 'Terraform destroy all managed infrastructure'
+                  sh '''
+                    terraform destroy
+                  '''
+                }
+                }
+            }
         stage('Terraform Init') {
             steps {
                  dir('setup'){
