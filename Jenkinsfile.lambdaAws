@@ -4,14 +4,14 @@ pipeline {
             terraform 'terraform'
         }
     stages {
-     stage('Terraform Destroy') {
+    stage('Terraform Destroy (Confirmation Required)') {
                 steps {
-                     dir('setup'){
+                  dir('setup'){
                   echo 'Terraform destroy all managed infrastructure'
-                  sh '''
-                    terraform destroy
-                  '''
-                }
+                    sh '''
+                      terraform destroy -auto-approve
+                    '''
+                  }
                 }
             }
         stage('Terraform Init') {
