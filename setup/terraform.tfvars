@@ -1,8 +1,8 @@
-region           = "eu-west-2"
-secretKey        = XXXX
-accessKey        = XXXX
-bucketName       = "bunkleumilambdabucket"
-deployRoleName   = "aws_role"
+region           = "us-east-1"
+secretKey        = "iNhVo4uJBNpTlaiZKBso+oN9PN7QfRkPWV9M63U7"
+accessKey        = "AKIAVRUVVFKW2PIVEIFI"
+bucketName       = "bankleumilambdabucket"
+deployRoleName   = "root_aws_role"
 zipFile          = "zip"
 codeObjectKey    = "app.zip"
 sourceDir        = "../app"
