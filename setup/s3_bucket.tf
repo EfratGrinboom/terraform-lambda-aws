@@ -1,7 +1,7 @@
 #creste a new bucket 
-#resource "aws_s3_bucket" "lambda_bucket" {
-#  bucket = var.bucketName
-#}
+resource "aws_s3_bucket" "lambda_bucket" {
+  bucket = var.bucketName
+}
 
 #create a zip file from the lambda code
 data "archive_file" "lambda_zip" {
@@ -12,7 +12,7 @@ data "archive_file" "lambda_zip" {
 
 #upload the zip file to the bucket
 resource "aws_s3_object" "lambda_function" {
-  bucket = var.bucketName
+  bucket = aws_s3_bucket.lambda_bucket.bucket
   key    = var.codeObjectKey
   source = data.archive_file.lambda_zip.output_path
 }
